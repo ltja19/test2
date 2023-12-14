@@ -5,7 +5,7 @@ import Chart from 'chart.js/auto'
     var stringify=JSON.stringify(json.recommendations)
     var userobj = JSON.parse(stringify)
     var newMap = stringify
-    alert(stringify)
+    //alert(stringify)
     //var data = userobj;
     new Chart(
         document.getElementById('test2'),

@@ -583,7 +583,7 @@ var _autoDefault = parcelHelpers.interopDefault(_auto);
     var stringify = JSON.stringify(json.recommendations);
     var userobj = JSON.parse(stringify);
     var newMap = stringify;
-    alert(stringify);
+    //alert(stringify)
     //var data = userobj;
     new (0, _autoDefault.default)(document.getElementById("test2"), {
         type: "pie",

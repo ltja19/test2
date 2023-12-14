@@ -580,15 +580,17 @@ var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
 (async function() {
     var json = require("2ff87cf77eaa274b");
-    var stringify = JSON.stringify(json.recomendations);
+    var stringify = JSON.stringify(json.footprint);
     var userobj = JSON.parse(stringify);
-    var newMap = stringify;
-    alert(stringify);
-    //var data = userobj;
+    const firstFootprint = json.footprint[0];
+    const firstServiceEstimate = firstFootprint.serviceEstimates[0];
+    const cost = firstServiceEstimate.cost;
+    console.log("Cost:", cost);
+    alert(cost);
     new (0, _autoDefault.default)(document.getElementById("test3"), {
-        type: "pie",
+        type: "line",
         data: {
-            labels: userobj.map((row)=>row.region),
+            labels: userobj.map((row)=>row.firstServiceEstimate.cost),
             datasets: [
                 {
                     label: "KilloWatt Hour Savings",
